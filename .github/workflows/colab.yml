@@ -24,4 +24,4 @@ jobs:
 
       - name: Run Notebook
         run: |
-          jupyter nbconvert --to notebook --execute Achievers_League_2025.ipynb --output output.ipynb
+          jupyter nbconvert --to notebook --execute Untitled3.ipynb --output output.ipynb
