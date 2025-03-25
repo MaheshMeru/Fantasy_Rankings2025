@@ -39,5 +39,5 @@ jobs:
           git pull --rebase origin main
       
           git commit -m "Auto-update index.html"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/MaheshMeru/Fantasy_Rankings2025.git main
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/MaheshMeru/Fantasy_Rankings2025.git main
   
