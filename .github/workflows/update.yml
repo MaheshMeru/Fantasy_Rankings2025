@@ -28,6 +28,16 @@ jobs:
         run: |
           git config --global user.email "raparthimahesh5@gmail.com"
           git config --global user.name "MaheshMeru"
+      
           git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes detected, skipping commit."
+            exit 0
+          fi
+      
+          # Pull latest changes before pushing (to avoid rejected push)
+          git pull --rebase origin main
+      
           git commit -m "Auto-update index.html"
-          git push
+          git push origin main
+  
