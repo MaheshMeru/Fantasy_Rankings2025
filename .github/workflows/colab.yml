@@ -12,17 +12,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Jupyter
-        run: pip install notebook nbconvert
+      - name: Set Up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install notebook nbconvert pandas numpy matplotlib  # Add other libraries if needed
 
       - name: Run Notebook
         run: |
           jupyter nbconvert --to notebook --execute Achievers_League_2025.ipynb --output output.ipynb
-
-      - name: Commit and Push Results
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add output.ipynb
-          git commit -m "Updated notebook results"
-          git push
