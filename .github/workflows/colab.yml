@@ -2,7 +2,7 @@ name: Run Colab Notebook
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Runs every hour (change as needed)
+    - cron: '*/2 * * * *'  # Runs every hour (change as needed)
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
