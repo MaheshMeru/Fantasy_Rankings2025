@@ -16,7 +16,7 @@ jobs:
 
       - name: Run Google Colab Notebook
         run: |
-          curl -s -X POST "https://colab.research.google.com/drive/1RutlrgYrDI-VmSWCyiWrU8ukIOiw5Afo#scrollTo=XG5UP6N83Xee"
+          curl -s -X POST "https://colab.research.google.com/drive/1kMkEN2PvQzIk5gI7cxjNnUWT1kokMXnr"
 
       - name: Commit & Push Updated index.html
         run: |
