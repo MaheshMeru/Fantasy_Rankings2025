@@ -25,3 +25,11 @@ jobs:
       - name: Run Notebook
         run: |
           jupyter nbconvert --to notebook --execute Untitled3.ipynb --output output.ipynb
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "MaheshMeru"
+          git config --global user.email "raparthimahesh5@gmail.com"
+          git add index.html
+          git commit -m "Update index.html with latest rankings" || echo "No changes to commit"
+          git push
