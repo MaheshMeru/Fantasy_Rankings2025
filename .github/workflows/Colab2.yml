@@ -2,7 +2,7 @@ name: Run2 Colab Notebook
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes from 3 PM - 11 PM
+    - cron: '*/7 * * * *'  # Every 15 minutes from 3 PM - 11 PM
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
