@@ -1,4 +1,4 @@
-name: Run2 Colab Notebook
+name: Run Colab Notebook2
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
           pip install notebook nbconvert pandas numpy matplotlib  # Add other libraries if needed
       - name: Run Notebook
         run: |
-          jupyter nbconvert --to notebook --execute updatev2.ipynb --output output.ipynb
+          jupyter nbconvert --to notebook --execute updatev3.ipynb --output output.ipynb
       - name: Commit and Push Changes
         run: |
           git config --global user.name "MaheshMeru"
