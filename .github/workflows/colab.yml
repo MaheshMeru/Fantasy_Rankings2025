@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Notebook
         run: |
-          jupyter nbconvert --to notebook --execute updatev2.ipynb --output output.ipynb
+          jupyter nbconvert --to notebook --execute updatev3.ipynb --output output.ipynb
 
       - name: Commit and Push Changes
         run: |
