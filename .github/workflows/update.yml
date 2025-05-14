@@ -1,9 +1,1 @@
-name: Auto Update & Deploy
-
-on:
-  schedule:
-    - cron: "*/15 15-23 * * *"  # Every 15 mins from 3 PM to 11:59 PM
-    - cron: "*/15 0-1 * * *"     # Every 15 mins from 12 AM to 1 AM
-    - cron: "*/15 * * * *"          # Every hour outside 3 PM - 1 AM
-  workflow_dispatch:             # Allow manual execution
 
