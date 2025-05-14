@@ -1,33 +1,33 @@
-name: Run Colab Notebook2
+#name: Run Colab Notebook2
 
-on:
-  schedule:
-    - cron: '*/7 * * * *'  # Every 15 minutes from 3 PM - 11 PM
-  workflow_dispatch:  # Allows manual trigger
+#on:
+#  schedule:
+#    - cron: '*/7 * * * *'  # Every 15 minutes from 3 PM - 11 PM
+#  workflow_dispatch:  # Allows manual trigger
 
-jobs:
-  run_colab:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+#jobs:
+#  run_colab:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout Repository
+#        uses: actions/checkout@v3
 
-      - name: Set Up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.10'
+#      - name: Set Up Python
+#        uses: actions/setup-python@v3
+#        with:
+#          python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          pip install --upgrade pip
-          pip install notebook nbconvert pandas numpy matplotlib  # Add other libraries if needed
-      - name: Run Notebook
-        run: |
-          jupyter nbconvert --to notebook --execute updatev3.ipynb --output output.ipynb
-      - name: Commit and Push Changes
-        run: |
-          git config --global user.name "MaheshMeru"
-          git config --global user.email "raparthimahesh5@gmail.com"
-          git add index.html
-          git commit -m "Update index.html with latest rankings" || echo "No changes to commit"
-          git push
+#      - name: Install Dependencies
+#        run: |
+#          pip install --upgrade pip
+#          pip install notebook nbconvert pandas numpy matplotlib  # Add other libraries if needed
+#      - name: Run Notebook
+#        run: |
+#          jupyter nbconvert --to notebook --execute updatev3.ipynb --output output.ipynb
+#      - name: Commit and Push Changes
+#        run: |
+#          git config --global user.name "MaheshMeru"
+#          git config --global user.email "raparthimahesh5@gmail.com"
+#          git add index.html
+#          git commit -m "Update index.html with latest rankings" || echo "No changes to commit"
+#          git push
